@@ -54,6 +54,20 @@ body {
     flex-direction: column;
     color: #000;
     position: relative;
+	z-index: 1;
+}
+.receipt::before {
+    content: "DEMO INVOICE GENERATOR";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .content { flex: 1; }
