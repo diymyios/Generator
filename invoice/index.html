@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Input Form -->
+<div class="form-section">
+  <h3>Invoice Input</h3>
+  <label>Invoice No: <input id="invoiceNo" value="12345678"></label>
+  <label>Date: <input id="invoiceDate" type="date"></label>
+  <label>Customer Name: <input id="customerName" value="Customer Name"></label>
+  <label>Customer Address: <textarea id="customerAddress" rows="3">Johor Bahru</textarea></label>
+  <label>Customer Phone: <input id="customerPhone" value="012-345 6789"></label>
+  <hr>
+  <label>Item Description: <input id="itemDesc" value="Sample Item"></label>
+  <label>Qty: <input id="itemQty" type="number" value="1"></label>
+  <label>Unit Price: <input id="itemPrice" type="number" step="0.01" value="100"></label>
+  <button onclick="addItem()">Add Item</button>
+</div>
+
+<!-- Action Buttons -->
+<div class="action-buttons">
+  <button onclick="window.print()">Print Invoice</button>
+</div>
+
+<!-- Invoice Preview -->
+<div id="invoice" class="invoice">
+  <div class="top-bar">
+    <div class="title">INVOICE</div>
+    <div class="ticket">
+      Invoice No: <span id="previewInvoiceNo">12345678</span><br>
+      Date: <span id="previewInvoiceDate">--</span><br>
+    </div>
+  </div>
+
+  <div class="header">
+    <img src="logo.png" class="logo">
+    <div class="company-text">
+      <b style="font-size:1.3em;">DEMO INVOICE GENERATOR</b>
+      <span style="font-size:0.95em;"> (ssm: 1234567890)</span><br>
+      Pasir Gudang<br>
+      Johor Bahru<br>
+      019-7900560 (Mr. Ben)
+    </div>
+  </div>
+
+  <div class="customer-info">
+    <b>M/S:</b><br>
+    <b style="font-size:1.1em;" id="previewCustomer">Customer Name</b><br>
+    <span id="previewAddress">Johor Bahru</span><br>
+    <span id="previewPhone">012-345 6789</span><br>
+  </div>
+
+  <table class="invoice-details">
+    <thead>
+      <tr>
+        <th style="width:5%">No</th>
+        <th>Description / Item</th>
+        <th style="width:8%">Qty</th>
+        <th style="width:15%">Unit Price (RM)</th>
+        <th style="width:15%">Total (RM)</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr>
+        <td colspan="4" class="total">Grand Total (RM)</td>
+        <td id="grandTotal" class="total">0.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div>This document is computer-generated and does not require a signature.</div>
+    <div>Received By: ________________________</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
