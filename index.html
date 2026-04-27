@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Generator</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4f46e5, #9333ea);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 10px;
+        padding: 14px 28px;
+        font-size: 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s ease;
+    }
+
+    .btn-invoice {
+        background: #22c55e;
+    }
+
+    .btn-invoice:hover {
+        background: #16a34a;
+        transform: translateY(-2px);
+    }
+
+    .btn-receipt {
+        background: #f59e0b;
+    }
+
+    .btn-receipt:hover {
+        background: #d97706;
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Demo Generator</h1>
+
+    <a class="btn btn-invoice" href="https://diymyios.github.io/Generator/invoice" target="_blank">
+        Demo Invoice
+    </a>
+
+    <a class="btn btn-receipt" href="https://diymyios.github.io/Generator/receipt" target="_blank">
+        Demo Receipt
+    </a>
+</div>
+
+</body>
+</html>
